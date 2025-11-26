@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 name: Build Apple Color Emoji font
-on: pull_request
+on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,8 +27,8 @@ jobs:
         with:
           name: apple-color-emoji-ttf
           path: AppleColorEmoji.ttf
-      - name: Archive OTF artifact
+      - name: Archive Windows TTF artifact
         uses: actions/upload-artifact@v4 # https://github.com/actions/upload-artifact
         with:
-          name: apple-color-winemoji-ttf
+          name: apple-color-win-emoji-ttf
           path: AppleColorEmoji_win.ttf
