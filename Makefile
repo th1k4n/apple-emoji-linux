@@ -13,7 +13,7 @@
 # limitations under the License.
 
 EMOJI = AppleColorEmoji
-EMOJI_WINDOWS = AppleColorEmoji_Win
+EMOJI_WINDOWS = AppleColorEmoji_win
 font: $(EMOJI).ttf $(EMOJI_WINDOWS).ttf
 
 CFLAGS = -std=c99 -Wall -Wextra `pkg-config --cflags --libs cairo`

@@ -22,8 +22,13 @@ jobs:
         run: |
           make -j
           make install
-      - name: Archive build artifacts
+      - name: Archive TTF artifact
         uses: actions/upload-artifact@v4 # https://github.com/actions/upload-artifact
         with:
-          name: apple-color-emoji-font
+          name: apple-color-emoji-ttf
           path: AppleColorEmoji.ttf
+      - name: Archive OTF artifact
+        uses: actions/upload-artifact@v4 # https://github.com/actions/upload-artifact
+        with:
+          name: apple-color-winemoji-ttf
+          path: AppleColorEmoji_win.ttf
